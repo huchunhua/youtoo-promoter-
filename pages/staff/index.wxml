@@ -1,0 +1,14 @@
+<view class="padding-lr-sm">
+	<radio-group class="radio-group" bindchange="radioChange">
+	  <label class="radio flex item padding-tb padding-lr-sm margin-tb-sm" wx:for="{{items}}">
+	    <radio value="{{item.id}}" checked="{{item.checked}}"  color='#fff' class="padding-top-xs"/>
+	    <image src='{{item.logo}}' mode='widthFix' class="logo margin-left-xs margin-right-sm"></image>
+	    <view class="flex-sub text-left info">
+	    	<view class="text-lg cf">{{item.name}}<span class="fr text-grey">已管理{{item.manager_count}}家</span></view>
+	    	<view class="text-sm padding-top-sm">编号：{{item.erp_number}}</view>
+	    </view>
+	  </label>
+	</radio-group>
+	<view class="flex-sub btn text-center btn-yellow" bindtap="distribution">立即分配</view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

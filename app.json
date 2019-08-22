@@ -1,0 +1,76 @@
+{
+  "pages": [ 
+    "pages/login/index",
+    "pages/invite/index",   
+    "pages/person/index",
+    "pages/bindcard/index",
+    "pages/study/index",  
+    "pages/detail/index",
+    "pages/files/index", 
+    "pages/college/index", 
+    "pages/certification/index",  
+    "pages/mobile-register/index",
+
+    "pages/withdraw/index",
+    "pages/finance-boss/index",    
+    "pages/apply-success/index",
+    "pages/invite-success/index",
+    "pages/home/index",
+    "pages/revenue/index",      
+    "pages/profit/index",   
+    "pages/withdraw-detail/index",
+    "pages/up/index",   
+    "pages/staff/index",    
+    "pages/sellerinfo/index",  
+    "pages/selleradmin/index",    
+    "pages/review/index",    
+    "pages/examine_/index",     
+    "pages/examine/index", 
+    "pages/bank-lists/index",    
+    "pages/adminshop/index",         
+    "pages/toallocat/index",
+    "pages/register-success/index",
+    "pages/certification-success/index",
+
+    "pages/goodsedit/index",
+    "pages/selleredit/index",
+    "pages/finance-normal/index",
+    "pages/register/index",
+    "pages/goods/index"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance":50
+  },
+  "tabBar":{
+    "color":"#909095",
+    "selectedColor":"#fdcd11",
+    "list": [
+      {
+        "pagePath": "pages/study/index",
+        "text": "学习",
+        "iconPath": "/assets/images/study_.png",
+        "selectedIconPath":"/assets/images/study.png"
+      },{
+        "pagePath": "pages/person/index",
+        "text": "我的",
+        "iconPath": "/assets/images/person_.png",
+        "selectedIconPath":"/assets/images/person.png"        
+      }]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于展示您周边的加油站"
+    }
+  },
+  "usingComponents": {
+    "loading": "/static/spin/index",
+    "presentation": "/static/presentation/index",
+    "presentations": "/static/presentations/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

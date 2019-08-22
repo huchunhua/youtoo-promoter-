@@ -1,0 +1,10 @@
+<view class='content'>
+    <view class='logo'>
+        <image src='/image/logo.png' class='logo-image'></image>
+        <text class='logo-text'>优途推广员端登录</text>
+    </view>
+    <input type='text' class='input-normal' placeholder-class='placeholder-color' placeholder='请输入手机号' bindinput="username" value="{{username}}" type="number"></input>
+    <input type='text' class='input-normal' placeholder-class='placeholder-color' placeholder='请输入登录密码' bindinput="password" value="{{password}}" password='true'></input>
+    <text class="fr text-yellow padding-top-sm register" bindtap="register">没有账号，立即注册</text>
+    <view class='next-step btn-yellow' bindtap="login">登录</view>
+</view>

@@ -1,0 +1,13 @@
+<view class="cardinfo">
+    <view class="info">
+        <view class="name">
+            <image src="{{cardInfo.logo}}"></image>
+            {{cardInfo.bank_name}}
+        </view>
+        <view class="num">{{cardInfo.num}}</view>
+    </view>
+    
+    <view data-index="{{index}}" bindtap="delItem" class="list_del del">删除</view>
+
+ <slot></slot>   
+</view>

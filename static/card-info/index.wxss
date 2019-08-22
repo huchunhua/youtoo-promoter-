@@ -1,0 +1,21 @@
+.cardinfo{
+    height: 150rpx;
+    bottom:1px solid #f4f4f4;
+    padding:30rpx;
+    font-size: 30rpx;
+}
+.more-icon{
+    width: 10rpx;
+    height: 20rpx;
+}
+.name{
+    margin-bottom: 20rpx;
+}
+.name>image{
+    width: 30rpx;
+    height: 30rpx;
+}
+.num{
+    margin-top: 20rpx;
+    color: #717171;
+}

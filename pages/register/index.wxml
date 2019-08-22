@@ -1,0 +1,6 @@
+<view class='logo'>
+    <image src='/image/logo.png' class='logo-image'></image>
+    <text class='logo-text'>中油优途推广员端</text>
+</view>
+<button type="primary">微信登陆</button>
+<button type="primary" bindtap="mobile">手机注册</button>

@@ -1,0 +1,48 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+page{
+    background-color: #f4f4f4;
+}
+.bg-white{
+    border-color: #fff;
+}
+.border-top{
+    border-top: 1px solid #f4f4f4;
+}
+.border-bottom{
+    border-bottom: 1px solid #f4f4f4;
+}
+.info .item{
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.item input{
+    width: calc(100% - 180rpx);
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.tips textarea{
+    width: calc(100% - 180rpx);
+    height: 130rpx;
+}
+.radio{
+    padding-left: 10rpx;
+}
+.btn-wrap{
+    margin-bottom: 70rpx;
+}
+.btn-wrap .btn{
+    width: 340rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    border-radius: 80rpx;
+}
+.goodsimg{
+    margin:10rpx;
+    width: 330rpx;
+    height: 230rpx;
+}
+picker{
+    display: inline-block;
+}

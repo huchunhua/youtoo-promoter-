@@ -1,0 +1,35 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+page{
+  background-color: #fff
+}
+.sort-list{
+  text-align: center;
+  color:#cacaca;
+  font-size: 28rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+}
+.sort-list .active{
+  color:#000000;
+}
+.icon_sort{
+	width: 16rpx;
+	height: 22rpx;
+}
+.more-icon{
+	width: 14rpx;
+	height: 24rpx;
+}
+.file{
+	height: 160rpx;
+	padding: 50rpx 30rpx 40rpx;
+	border-bottom: 1px solid #f4f4f4;
+}
+.title{
+  text-overflow:ellipsis;
+  overflow:hidden;
+  width: 100%
+}

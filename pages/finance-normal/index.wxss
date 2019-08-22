@@ -1,0 +1,20 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+Page {
+    background: #f4f4f4;
+    text-align: center;
+}
+.bg-white{
+    background-color: #fff;
+}
+.border-right{
+    border-right: 1px solid #f4f4f4;
+}
+.btn-cash{
+    margin:0 auto;
+    width: 320rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    border-radius: 60rpx;
+}

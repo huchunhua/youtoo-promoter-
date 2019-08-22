@@ -1,0 +1,51 @@
+<view id="">
+    <view class="flex padding-tb padding-lr-sm bg-white border-top">
+        <image src="{{datas.logo}}" class="shop_loge"></image>
+        <view class="flex-sub">
+            <view class="shop-name padding-bottom text-lg">{{datas.name}}</view>
+            <view class="text-grey padding-bottom-sm text-sm">编号：{{datas.erp_number}}</view>
+            <view class="text-grey text-sm">
+                职位：
+                <span wx:if="{{datas.type == 1}}">店长</span>
+                <span wx:if="{{datas.type == 2}}">推广员</span>
+            </view>
+        </view>
+    </view>
+    <view class="content bg-white padding-lr-sm text-lg margin-top-xs">   	
+    	<view class="item cf">
+    		联系电话
+    		<text class="fr">{{datas.phone}}</text>
+    	</view>    	
+    	<view class="item cf">
+    		所属加油站
+    		<text class="fr">{{datas.oil_name}}</text>
+    	</view>
+        <view class="flex padding-tb-lg finance" bindtap="finance">
+            <image src="../../assets/images/person_01.png" class="manege-icon"></image>
+            <view class="flex-sub cf">
+                财务管理
+                <view class='fr flex {{datas.type == 1 ? "info" : ""}}'>
+                    <view class="flex-sub">
+                        <view class="text-red">总收益{{datas.earnings}}</view>
+                        <view wx:if="{{datas.type ==1}}">余额{{datas.balance}}</view>                        
+                    </view>
+                    <image src="../../image/my_more.png" class="more-icon  margin-left margin-top"></image> 
+                </view>                
+            </view>             
+        </view>        	
+        <view class="flex padding-tb-lg finance" bindtap="seller">
+            <image src="../../assets/images/person_02.png" class="manege-icon"></image>
+            <view class="flex-sub cf">
+                商家管理
+                <view class='fr text-grey'>
+                    {{datas.manager_count}}家
+                    <image src="../../image/my_more.png" class="more-icon margin-left"></image> 
+                </view>                
+            </view>   			
+    	</view>  
+    </view>
+    <view class="invite btn-yellow" bindtap="invite">
+        邀请商户
+    </view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

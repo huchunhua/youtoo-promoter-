@@ -1,0 +1,29 @@
+<view class="view-margin  padding-lr-sm  bg-white">
+    <view class="padding-tb border-bottom text-bold">商家信息</view>
+    <view class="padding-tb border-bottom flex">
+        <text class="text-font-left title text-grey">商家名称</text>
+        <text class="flex-sub">{{name}}</text>
+     </view>
+     <view class="padding-tb border-bottom flex">
+         <text class="text-font-left title text-grey">商铺地址</text>
+         <text class="flex-sub">{{add}}</text>
+      </view>
+</view>
+<view class="margin-top-xs padding-lr-sm padding-bottom bg-white">
+    <view class="padding-tb border-bottom text-bold">审核</view>
+    <view class="flex btn-group">
+        <view class="btn {{status == 1 ? 'btn-yellow' : 'btn-grey'}}" bindtap="operation" data-status='1'>
+            <image src="{{status == 1 ? '../../assets/images/pass.png' : '../../assets/images/pass_.png'}}"></image>
+            通过
+        </view>
+        <view class="btn {{status == 2 ? 'btn-red' :'btn-grey'}}" bindtap="operation" data-status='2'>
+            <image src="{{status == 2 ? '../../assets/images/nopass.png' : '../../assets/images/nopass_.png'}}"></image>
+            不通过
+        </view>
+    </view>  
+    <textarea placeholder="请填写原因" value="{{msg}}" bindinput="msg"></textarea>  
+</view>
+<view class="btn-wrap bg-white">
+    <view class="btn btn-yellow margin-tb-xs margin-lr" data-id="{{id}}" bindtap="submit">提交审核</view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

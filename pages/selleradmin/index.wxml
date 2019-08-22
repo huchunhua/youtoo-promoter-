@@ -1,0 +1,28 @@
+<view class="cf padding-lr-sm">
+  <view class="list fl text-center padding-top-lg" bindtap="up">
+    <image src="../../assets/images/admin_04.png"></image>
+    <view class="padding-tb text-xl">已上线（全部）</view>
+    <view class="text-grey text-lg">{{datas.online}}家</view>
+  </view>
+  <view class="list fl text-center padding-top-lg" wx:if="{{datas.type == 1}}" bindtap="adminshop">
+    <image src="../../assets/images/admin_03.png"></image>
+    <view class="padding-tb text-xl">我管理的商家</view>
+    <view class="text-grey text-lg">{{datas.manager}}家</view>
+  </view>
+  <view class="list fl text-center padding-top-lg" wx:if="{{datas.type == 1}}" bindtap="toallocat">
+    <image src="../../assets/images/admin_01.png"></image>
+    <view class="padding-tb text-xl">待分配商家</view>
+    <view class="text-grey text-lg">{{datas.distribution}}家</view>
+  </view>
+  <view class="list fl text-center padding-top-lg" bindtap="examine">
+    <image src="../../assets/images/admin_02.png"></image>
+    <view class="padding-tb text-xl">待审核商家</view>
+    <view class="text-grey text-lg">{{datas.audit}}家</view>
+  </view>
+  <view class="list fl text-center padding-top-lg" bindtap="examine_">
+    <image src="../../assets/images/admin_05.png"></image>
+    <view class="padding-tb text-xl">未通过</view>
+    <view class="text-grey text-lg">{{datas.approverd}}家</view>
+  </view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

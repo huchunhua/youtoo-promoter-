@@ -1,0 +1,3 @@
+<image src="{{logo}}" class="banner"></image>
+<rich-text nodes="{{text}}"  class="padding text"></rich-text>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

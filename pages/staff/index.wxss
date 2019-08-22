@@ -1,0 +1,57 @@
+/**index.wxss**/
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+page{
+  background-color: #f4f4f4;
+  text-align: center;
+}
+.item{
+	background-color: #fff;
+	width: 100%;
+	height: 140rpx;
+	border-radius: 10rpx;
+}
+radio-group{
+	width: 100%
+}
+radio {
+	margin-top: 30rpx;
+    width: 20rpx;
+    height: 20rpx;
+    line-height: 20rpx;
+}
+/* 单选框未选中 */
+radio .wx-radio-input {
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 50%;
+}
+/* 单选框选中后对勾样式 */
+radio .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-align: center;
+    font-size:0;   
+    color:#39b54a;
+    background-color: #da2728;
+    border-color: #da2728;
+}
+.logo{
+	margin-top: 5rpx;
+	width: 90rpx;
+	height: 90rpx;
+	border-radius: 90rpx
+}
+.info{
+	margin-top: 10rpx;
+}
+.btn{
+	position: fixed;
+	left:0;
+	bottom:0;
+	width: 100%;
+	height: 100rpx;
+	line-height: 100rpx
+}

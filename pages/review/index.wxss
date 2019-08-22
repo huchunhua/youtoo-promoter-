@@ -1,0 +1,53 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+Page {
+    background: #f4f4f4;
+    font-size: 32rpx;
+    color:#0e0e0e;
+}
+.bg-white{
+	background-color: #fff;
+}
+.border-bottom{
+	border-bottom: 1px solid #f4f4f4;
+}
+.title{
+	width:180rpx;
+}
+.btn-group{
+	padding:30rpx 25rpx;
+}
+.btn{
+	width: calc(50% - 30rpx);
+	margin:0 15rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	border-radius: 10rpx;
+	text-align: center;
+}
+.btn>image{
+	width: 26rpx;
+	height: 26rpx;
+}
+.btn-wrap{
+	position: fixed;
+	left:0;
+	bottom:0;
+	height: 100rpx;
+	width: 100%
+}
+.btn-wrap .btn{
+	margin:10rpx 20rpx;
+	width: calc(100% - 40rpx);
+	height: 80rpx;
+	line-height: 80rpx;
+	border-radius: 80rpx;
+}
+textarea{
+	margin:30rpx;
+	width: calc(100% - 60rpx);
+	height: 300rpx;
+	padding:20rpx;
+	border-radius: 4rpx;
+	border:1px solid #bebebe;
+}

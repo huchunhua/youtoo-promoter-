@@ -1,0 +1,51 @@
+.goodsinfo{
+    float: left;
+    margin:30rpx;
+    width:calc(50% - 60rpx);
+    font-size: 30rpx;
+}
+.goodsinfo image{
+    width: 100%;
+    height: 214rpx;
+}
+.name{
+    padding:20rpx 0;
+}
+.text-red{
+    color:#ff6666;
+}
+.text-grey{
+    color: #c1c1c1;
+    font-size: 22rpx;
+}
+.cf::after, .cf::before {
+  content: " ";
+  display: table;
+}
+.cf::after {
+  clear: both;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.old{
+    text-decoration: line-through;
+}
+.btn{
+    width: 110rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    border-radius: 50rpx;
+    border:1px solid #f4f4f4;
+}
+.btn-yellow{
+    background-color: #fdcd11;
+    border-color: #fdcd11;
+}
+.mt-20{
+    margin-top: 20rpx;
+}

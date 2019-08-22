@@ -1,0 +1,48 @@
+<view id="">
+    <view class="info border-top padding-lr-sm bg-white">       
+        <view class="item border-bottom cf">
+            商家名称
+            <input bindinput="name"  value="{{name}}" placeholder="请输入商家名称" class="fr"></input>
+        </view>        
+        <view class="item border-bottom cf">
+            商家地址
+            <input bindinput="add"  value="{{add}}" placeholder="请输入商家地址" class="fr"></input>
+        </view>        
+        <view class="item border-bottom cf">
+            店长名称
+            <input bindinput="shopper"  value="{{shopper}}"placeholder="请输入店长名称" class="fr"></input>
+        </view>        
+        <view class="item border-bottom cf">
+            手机号码
+            <input bindinput="phone"  value="{{phone}}"placeholder="请输入手机号码" class="fr"></input>
+        </view>         
+        <view class="item border-bottom cf">
+            营业开始时间
+            <input bindinput="starttime"  value="{{starttime}}"placeholder="请输入营业开始时间" class="fr"></input>
+        </view>         
+        <view class="item border-bottom cf">
+            营业结束时间
+            <input bindinput="endtime"  value="{{endtime}}"placeholder="请输入营业结束时间" class="fr"></input>
+        </view>         
+    </view>
+    <view class="pics bg-white margin-top-xs padding-lr-sm padding-tb-lg">
+        <view class="title  padding-bottom-lg">商店图片</view>
+        <image src='{{logo ? logo : "../../image/add_img.png"}}' bindtap="openchangeImg" class="goodsimg"></image>
+    </view>
+    <view class="cf btn-wrap padding-lr-sm margin-top-lg">
+        <view class="fl btn btn-byellow" bindtap="delgoods">删除</view>
+        <view class="fr btn btn-yellow" bindtap='editgoods'>提交</view>
+    </view>
+    <modal-box class="changeimgModal {{ischangeimgModal == true ? 'show' : ''}} picker">
+      <dialog>
+        <view class="changewrap padding-tb">
+          <view bindtap="changeimg" data-sourceType="camera" class="padding-bottom-sm">拍照</view>
+          <view bindtap="changeimg" data-sourceType="album">手机相册</view>
+        </view>
+        <view class="canclebtn padding-bottom-sm" bindtap="closechangeImg">
+          <view>取消</view>
+        </view>
+      </dialog>
+    </modal-box>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

@@ -1,0 +1,4 @@
+<view class='logo'>
+    <image src='/image/success.png' class='logo-image'></image>
+    <text class='logo-text'>商家信息提交成功，请注意查看商家状态</text>
+</view>

@@ -1,0 +1,17 @@
+<view class="presentation">
+	<image src="{{Info.seller_logo}}" class="loge"></image>
+	<view class="flex-sub">
+	    <view class="cf">
+	    	<span class="name">{{Info.seller_name}}</span>
+	    	<view class="fr text-grey">{{Info.sale_type}}</view>
+	    </view>
+	    <view class="cf margin">
+	    	订单金额：{{Info.order_money}}
+	    	<view class="fr">返利：<span class="text-red">{{Info.money}}</span></view>
+	    </view>	    
+	    <view class="cf margin">
+	    	时间：{{Info.create_time}}
+	    	<view class="fr text-red" wx:if="{{Info.other_earnings}}">管理：{{Info.other_earnings}}</view>
+	    </view>
+   	</view>
+</view>

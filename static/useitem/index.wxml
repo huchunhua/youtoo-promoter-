@@ -1,0 +1,10 @@
+<view class="presentation">
+    <view class="cf">
+    	<span class="name">{{Info.po_pname}}</span>
+    	<view class="fr text-grey">{{Info.po_use_time}}</view>
+    </view>     
+    <view class="cf margin">
+    	单价：{{Info.po_price / Info.po_number}}<span class="num">数量：{{Info.po_number}}</span>
+    	<view class="fr">总价：<span class="text-red">{{Info.po_price}}</span></view>
+    </view> 
+</view>

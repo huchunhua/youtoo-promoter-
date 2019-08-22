@@ -1,0 +1,42 @@
+<view id="layout">
+     <view class="total padding-tb bg-white">
+         <view class="padding-top-sm text-lg">今日收益</view>
+         <view class="padding-tb-sm text-red text-xxl">{{datas.todayAll}}</view>
+         <view class="padding-top-lg flex">
+             <view class="flex-sub border-right" wx:if="{{datas.type == 1}}">
+                 <view class="text-sm padding-bottom-sm">管理收益</view>
+                 <view class="text-lg">{{datas.todayMmanagement}}</view>
+             </view>
+             <view class="flex-sub">
+                 <view class="text-sm padding-bottom-sm">销售收益</view>
+                 <view class="text-lg">{{datas.todaySale}}</view>
+             </view>
+         </view>
+     </view>
+     <view class="total padding-tb bg-white margin-top-xs">
+          <view class="padding-top-sm text-lg">总收益</view>
+          <view class="padding-tb-sm text-red text-xxl">{{datas.all}}</view>
+          <view class="padding-top-lg flex">
+              <view class="flex-sub border-right" bindtap="revenue"  wx:if="{{datas.type == 1}}">
+                  <view class="text-sm padding-bottom-sm">管理收益</view>
+                  <view class="text-lg">{{datas.allMmanagement}}</view>
+              </view>
+              <view class="flex-sub" bindtap="profit">
+                  <view class="text-sm padding-bottom-sm">销售收益</view>
+                  <view class="text-lg">{{datas.allSale}}</view>
+              </view>
+          </view>
+      </view>
+      <view class="margin-top-xs padding bg-white flex text-left text-lg">
+           <view class="flex-sub cashing">已提现<text class="margin-left text-xl">{{datas.withdrawal}}</text></view>
+           <view class="btn-sm btn-byellow" bindtap="details">提现明细</view>
+       </view>
+     <view class="margin-top-xs padding-sm bg-white">
+         <view class="text-lg">余额</view>
+         <view class="text-red padding-tb text-xxl">{{datas.balance}}</view>
+         <view class="btn-yellow btn-cash text-lg" bindtap="withdrawCash">
+             提现
+         </view>
+     </view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

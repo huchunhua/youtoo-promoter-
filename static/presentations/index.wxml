@@ -1,0 +1,13 @@
+<view class="presentation">
+	<image src="{{Info.seller_logo}}" class="loge"></image>
+	<view class="flex-sub">
+	    <view class="cf">
+	    	<span class="name">{{Info.seller_name}}</span>
+	    	<view class="fr text-grey">{{Info.instructions}}</view>
+	    </view>
+	    <view class="cf margin">
+	    	提现金额：{{Info.seller_money}}
+	    	<view class="fr">时间:{{Info.create_time}}</view>
+	    </view>
+   	</view>
+</view>

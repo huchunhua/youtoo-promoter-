@@ -1,0 +1,14 @@
+.logo{
+    text-align: center;
+    font-size: 28rpx;
+    color: #212121;
+}
+.logo-image{
+    margin-top: 120rpx;
+    width: 135rpx;
+    height: 135rpx;
+}
+.logo-text{
+    margin-top: 45rpx;
+    display: block;
+}

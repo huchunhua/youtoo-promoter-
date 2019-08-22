@@ -1,0 +1,30 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+page{
+  background-color: #fff
+}
+.more-icon{
+	width: 14rpx;
+	height: 24rpx;
+}
+.list{
+  margin:10rpx;
+  width: calc(50% - 20rpx);
+}
+.list>image{
+  height: 220rpx;
+}
+.files{
+  border-top: 10rpx solid #f4f4f4;
+}
+.file_name{
+  text-decoration: underline;
+}
+.title{
+	text-overflow:ellipsis;
+	overflow:hidden;
+	width: 100%
+}
+.titlesm{
+	width: calc(100% - 300rpx)
+}

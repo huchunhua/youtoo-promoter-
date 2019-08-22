@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="padding-lr-sm">
+<checkbox-group bindchange="checkboxChange">
+  <label class="checkbox flex item padding-tb padding-lr-sm margin-tb-sm" wx:for="{{lists}}">
+    <checkbox value="{{item.id}}" checked="{{item.checked}}" />
+ 	<image src='{{item.seller_logo}}' class="logo margin-left-xs margin-right-sm"></image>
+	<view class="flex-sub text-left info">
+	    <view class="text-lg cf">{{item.manager_truename}}<span class="fr text-grey">{{item.distance}}km</span></view>
+	    <view class="padding-tb-sm text-grey">
+	    	<image src='/assets/images/add.png' class="add-icon"></image>
+		    {{item.seller_address}}
+		</view>
+	    <view class="text-sm text-yellow">{{item.promoters.name}}{{item.promoters.phone}}</view>
+	</view>
+  </label>
+</checkbox-group>
+<!-- <view class="refuse" wx:if="{{refuse}}">
+	<textarea placeholder="请输入审核不通过的原因" bindinput="msg" value="{{msg}}"></textarea>	
+	<view class="cf btns">
+		<view class="btn fl btn-grey"  bindtap='refuse'>取消</view>
+		<view class="btn fr btn-green" bindtap="distribution">确定</view>
+	</view>
+</view> -->
+<!-- 	<view class="num">
+		已选择{{num}}家
+	</view> -->
+	<view class="btn-group text-center flex">
+		<!-- <view class="flex-sub padding-left-sm btn-red" bindtap='refuse'>审核不通过</view> -->
+		<view class="flex-sub">已选择{{num}}家</view>
+		<view class="flex-sub btn btn-yellow" bindtap="staff">通过去分配</view>
+	</view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

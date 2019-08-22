@@ -1,0 +1,79 @@
+/**index.wxss**/
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+page{
+  background-color: #f4f4f4;
+  text-align: center;
+}
+.item{
+	background-color: #fff;
+	width: 100%;
+	height: 140rpx;
+	border-radius: 10rpx;
+}
+checkbox{
+	margin-top:30rpx;
+}
+checkbox .wx-checkbox-input{
+      width: 22rpx;
+      height: 22rpx;
+      border-radius: 22rpx;
+}
+.info{
+	margin-top: 10rpx;
+}
+.logo{
+	width: 90rpx;
+	height: 90rpx;
+	border-right: 110rpx
+}
+.add-icon{
+	width: 18rpx;
+	height: 20rpx;
+}
+.refuse .btns{
+	padding:20rpx 100rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+}
+.refuse .btn{
+	height: 60rpx;
+	width: 120rpx;
+	line-height: 60rpx;
+	text-align: center;
+	border:1px solid;
+	border-radius: 10rpx;
+}
+textarea{
+	width: 100%;
+	height: 300rpx;
+	border:1px solid #d0d0d0;
+	border-radius: 6rpx;
+	padding:20rpx;
+	text-align: left;
+}
+.num{
+	position: fixed;
+	left:0;
+	bottom:100rpx;
+	background-color: #d0d0d0;
+	width: 100%;
+	height: 45rpx;
+	line-height: 45rpx;
+}
+.btn-group{
+	position: fixed;
+	bottom:0;
+	left:0;
+	width: 100%;
+	height: 100rpx;
+	line-height: 100rpx;
+	background-color: #fff
+}
+.btn-red{
+	background-color: #ff605f;
+	color:#fff;
+}
+checkbox-group{
+	padding-bottom:120rpx;
+}

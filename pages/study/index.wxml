@@ -1,0 +1,29 @@
+<view class="padding-top-sm padding-lr-sm">
+  <view class="padding-top cf text-xl">
+    中油学院
+    <view class="fr text-lg" bindtap="college">
+      查看更多
+      <image src="../../assets/images/more.png" class="more-icon"></image>
+    </view>
+  </view>    
+</view>
+<view class="cf padding-lr-sm">
+  <navigator class="list fl" wx:for="{{lists}}" hover-class="none" url="/pages/detail/index?id={{item.id}}">
+    <image src="{{item.logo}}" class=" padding-top-lg"></image>
+    <view class="padding-top-xs text-lg title">{{item.title}}</view>
+  </navigator>
+</view>
+<view class="files padding-top-sm padding-lr-sm">
+  <view class="padding-tb cf text-xl">
+    政策文件
+    <view class="fr text-lg" bindtap="files">
+      查看更多
+      <image src="../../assets/images/more.png" class="more-icon"></image>
+    </view>
+  </view> 
+  <navigator class="cf padding-bottom-lg" wx:for="{{files}}" hover-class="none" url="/pages/detail/index?id={{item.id}}">
+    <view class="fl file_name title titlesm">{{item.title}}</view>
+    <view class="fr text-grey">{{item.create_time}}</view>
+  </navigator>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

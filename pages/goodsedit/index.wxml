@@ -1,0 +1,95 @@
+<view id="">
+    <view class="info border-top padding-lr-sm bg-white">
+        <view class="title padding-tb">商品信息</view>
+        <view class="item border-bottom cf">
+            商品分类
+            <!-- <view class="fr">选择商品分类</view> -->
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{class}}" range-key="title" class="fr">
+                <view class="picker" style='color:{{index==""?"#E2E2E2":black}}'>
+                  {{index==""?"选择商品分类":class[index].title}}
+                </view>
+              </picker>
+        </view>        
+        <view class="item border-bottom cf">
+            市场价格
+            <input bindinput="mprice"  value="{{mprice}}" placeholder="请输入市场价格" class="fr"></input>
+        </view>        
+        <view class="item border-bottom cf">
+            团购价格
+            <input bindinput="price"  value="{{price}}" placeholder="请输入团购价格" class="fr"></input>
+        </view>        
+        <view class="item border-bottom cf">
+            商品标题
+            <input bindinput="title"  value="{{title}}"placeholder="请输入商品标题" class="fr"></input>
+        </view>        
+        <view class="item border-bottom cf">
+            商品名称
+            <input bindinput="name"  value="{{name}}"placeholder="请输入商品名称" class="fr"></input>
+        </view>         
+        <view class="item border-bottom cf">
+            使用开始时间
+            <!-- <input bindinput="starttime"  value="{{starttime}}"placeholder="请输入商品使用开始时间" class="fr"></input> -->
+            <picker mode="time" value="{{starttime}}"  end="{{endtime}}" bindchange="bindTimeChange">  
+                <view class="picker">  
+                  {{starttime}}  
+                </view>  
+            </picker>  
+        </view>         
+        <view class="item border-bottom cf">
+            使用结束时间
+            <!-- <input bindinput="endtime"  value="{{endtime}}"placeholder="请输入商品使用结束时间" class="fr"></input> -->
+            <picker mode="time" value="{{endtime}}" start="{{starttime}}" end="2050-01-01" bindchange="bindTimeChange2">  
+                <view class="picker">  
+                  {{endtime}}  
+                </view>  
+            </picker>
+        </view>         
+        <view class="item border-bottom cf">
+            库存
+            <input bindinput="inventory"  value="{{inventory}}"placeholder="请输入库存" class="fr"></input>
+        </view>            
+        <view class="tips padding-top cf border-bottom">
+            商品描述
+            <textarea
+                bindinput="describe"
+                value="{{describe}}"
+                placeholder="请输入商品详情"
+                class="fr"
+              />
+        </view>        
+    </view>
+    <view class="pics bg-white margin-top-xs padding-lr-sm padding-tb-lg">
+        <view class="title  padding-bottom-lg">商品展示图片</view>
+        <image src='{{logo ? logo : "../../image/add_img.png"}}' bindtap="openchangeImg" data-type="one" class="goodsimg"></image>
+    </view>
+    <view class="pics bg-white margin-top-xs padding-lr-sm padding-tb-lg">
+        <view class="title  padding-bottom-lg">商品图片</view>
+        <image src="{{item}}" wx:for="{{pics}}" class="goodsimg"></image>
+        <image src='../../image/add_img.png' bindtap="openchangeImg" data-type="more" class="goodsimg"></image>
+    </view>
+    <view class="margin-top-xs padding-tb padding-lr-sm bg-white">
+        商品状态
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio" wx:for="{{state}}" wx:key="">
+            <radio value="{{item.value}}" checked="{{item.value == status}}" />
+            {{item.name}}
+          </label>
+        </radio-group>
+    </view>
+    <view class="cf btn-wrap padding-lr-sm margin-top-lg">
+        <view class="fl btn btn-byellow" bindtap="delgoods">删除</view>
+        <view class="fr btn btn-yellow" bindtap='editgoods'>提交</view>
+    </view>
+    <modal-box class="changeimgModal {{ischangeimgModal == true ? 'show' : ''}} picker">
+      <dialog>
+        <view class="changewrap padding-tb">
+          <view bindtap="changeimg" data-sourceType="camera" class="padding-bottom-sm">拍照</view>
+          <view bindtap="changeimg" data-sourceType="album">手机相册</view>
+        </view>
+        <view class="canclebtn padding-bottom-sm" bindtap="closechangeImg">
+          <view>取消</view>
+        </view>
+      </dialog>
+    </modal-box>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

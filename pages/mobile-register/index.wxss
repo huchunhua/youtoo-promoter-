@@ -1,0 +1,67 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+page{
+  background-color: white;
+}
+.content{
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+}
+.logo{
+    text-align: center;
+    font-size: 26rpx;
+    color: #8B8B8B;
+    font-weight: bold;
+}
+.logo-image{
+    margin-top: 60rpx;
+    width: 170rpx;
+    height: 170rpx;
+}
+.logo-text{
+    margin-top: 35rpx;
+    margin-bottom: 90rpx;
+    display: block;
+}
+.placeholder-color{
+    color: #BCBCBC;
+    font-size: 28rpx;
+}
+.view-send{
+    border-bottom: 1px solid #EBEBEB;
+    display: flex;
+    align-items:center;
+    position: relative;
+}
+.view-send .send-btn{
+  position: absolute;
+  top:20rpx;
+  right: 0;
+  width: 220rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 70rpx;
+  text-align: center;
+}
+.input-normal{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #EBEBEB;
+  text-align: left;
+}
+.input-send{
+  height: 100rpx;
+  width: 430rpx;
+  line-height: 100rpx;
+  text-align: left;
+  display: inline-block;
+}
+.next-step{
+  margin-top: 80rpx;
+  width: 675rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  font-size: 32rpx;
+  text-align: center;
+}

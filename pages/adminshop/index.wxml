@@ -1,0 +1,14 @@
+<view class="padding-sm">
+	<view class="flex padding-tb padding-lr-sm bg-white margin-tb-sm" wx:for="{{lists}}" bindtap="sellerinfo" data-id="{{item.id}}">
+		<image src="{{item.seller_logo}}" class="shopimg"></image>
+		<view class="flex-sub text-left cf">
+			<view class="text-lg cf">{{item.manager_truename}}<span class="fr text-grey">{{item.distance}}km</span></view>
+	    	<view class="padding-tb-sm text-grey">
+	    		<image src='/assets/images/add.png' mode='widthFix' class="add-icon"></image>
+		    	{{item.seller_address}}
+		    </view>
+	    	<view class="text-sm">{{item.promoters.name}}{{item.promoters.phone}}</view>
+		</view>
+	</view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

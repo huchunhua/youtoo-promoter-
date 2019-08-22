@@ -1,0 +1,28 @@
+<view class="padding-lr-sm">
+  <view class="flex sort-list">
+    <text class="flex-sub {{showIndex == 0?'active':''}}" bindtap="sort" data-type="0"   catchtap='onTabSelect' data-index='0'>全部</text>
+    <view class="flex-sub {{showIndex == 1?'active':''}}" bindtap="sort" data-type="1"   catchtap='onTabSelect' data-index='1'  data-asc="{{asc}}">
+      阅读量
+      <image src="../../assets/images/sort.png" class="icon_sort" wx:if="{{showIndex == 0 | showIndex == 2 | showIndex == 3}}"></image>
+      <image src="../../assets/images/up.png" class="icon_sort" wx:elif="{{asc}}"></image>
+      <image src="../../assets/images/down.png" class="icon_sort" wx:elif="{{!asc}}"></image>
+    </view>
+    <view class="flex-sub {{showIndex == 3?'active':''}}" bindtap="sort" data-type="2"   catchtap='onTabSelect' data-index='3'  data-asc="{{asc}}">
+      更新时间
+      <image src="../../assets/images/sort.png" class="icon_sort" wx:if="{{showIndex == 0 | showIndex == 1 | showIndex == 2}}"></image>
+      <image src="../../assets/images/up.png" class="icon_sort" wx:elif="{{asc}}"></image>
+      <image src="../../assets/images/down.png" class="icon_sort" wx:elif="{{!asc}}"></image>
+    </view>
+  </view>       
+</view>
+<navigator class="file" wx:for="{{files}}" hover-class="none" url="/pages/detail/index?id={{item.id}}">
+  <view class="cf title">
+    {{item.title}}
+    <text class="fr text-grey">已读{{item.reading}}</text>
+  </view>  
+  <view class="padding-top-sm cf text-grey">
+    {{item.create_time}}
+    <image src="../../assets/images/more.png" class="more-icon fr"></image>
+  </view>
+</navigator>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

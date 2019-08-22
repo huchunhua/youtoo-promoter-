@@ -1,0 +1,13 @@
+<view class='content'>
+    <view class='logo'>
+        <image src='/image/logo.png' class='logo-image'></image>
+        <text class='logo-text'>优途推广员端注册</text>
+    </view>
+    <input type='text' class='input-normal' placeholder-class='placeholder-color' placeholder='请输入手机号' bindinput="phone" value="{{phone}}"></input>
+    <input type='text' class='input-normal' placeholder-class='placeholder-color' placeholder='请输入登录密码' bindinput="password" value="{{password}}" password='true'></input>
+    <view class='view-send'>
+        <input type='password' class='input-send' placeholder-class='placeholder-color' placeholder='请输入验证码' bindinput="code" value="{{code}}"></input>
+        <view class="send-btn btn-byellow" bindtap="sendcode">发送验证码</view>
+    </view>
+    <view class='next-step btn-yellow' bindtap="certification">下一步</view>
+</view>

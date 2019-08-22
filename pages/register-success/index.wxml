@@ -1,0 +1,4 @@
+<view class='logo'>
+    <image src='/image/success.png' class='logo-image'></image>
+    <text class='logo-text'>推广员注册成功</text>
+</view>

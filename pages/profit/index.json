@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "销售收益",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#fff",
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,10 @@
+/**index.wxss**/
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+.banner{
+	height: 470rpx;
+	width: 100%;
+}
+.text{
+	line-height: 40rpx;
+}

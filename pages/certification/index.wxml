@@ -1,0 +1,31 @@
+<view id="layout">
+    <view class="margin-top-sm margin-lr-sm padding-tb-sm padding-lr bg-white card-info radius">
+        <view class="padding-bottom-sm border-bottom flex">
+            <text class="text-font-left font-weight">认证信息</text>
+         </view>
+        <view class="padding-bottom-sm border-bottom flex">
+            <text class="text-font-left">姓名</text>
+            <input value="{{name}}" placeholder='请输入姓名' class="flex-sub" placeholder-class="text-font-right" bindinput="name"></input>
+         </view>
+         <view class="padding-bottom-sm border-bottom cf">
+             <text class="text-font-left">性别</text>
+             <view class='text-float-left'>
+                <picker bindchange="bindPickerChange" value="{{id}}" range="{{sex}}" range-key="title">
+                    <view class="picker" style='color:{{index==""?"#E2E2E2":black}}'>
+                        <text>{{index==""?"请选择性别":sex[index].title}}</text>
+                    </view>
+                </picker>
+             </view>
+             <image src="../../image/my_more.png" class="more-icon" wx:if="{{index == ''}}"></image>
+         </view>
+         <view class="padding-bottom-sm flex">
+            <text class="text-font-left">身份证号</text>
+            <input value="{{idcard}}" placeholder='请输入身份证号' class="flex-sub" placeholder-class="text-font-right" bindinput="idcard"></input>
+         </view>
+         <view class="padding-bottom-sm flex">
+             <text class="text-font-left">ERP编号</text>
+             <input value="{{erpcode}}" placeholder='请输入ERP编号' class="flex-sub" placeholder-class="text-font-right" bindinput="erpcode"></input>
+          </view>
+    </view>
+    <view class="btn-sub btn-yellow margin-lr-sm margin-top-lg text-lg" bindtap="submit">提交</view>
+</view>

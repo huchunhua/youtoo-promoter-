@@ -1,0 +1,13 @@
+<view id="">
+    <view class="type flex text-center text-grey">
+        <view class="flex-sub {{type == item.id? 'active' : ''}}" wx:for="{{goodstype}}" data-type="{{item.id}}" bindtap="select">{{item.title}}<view class="line"></view></view>
+    </view>
+    <view class="cf goodslist">
+        <goods wx:for="{{goods}}" goods="{{item}}"></goods>
+    </view>
+    <view class="state flex text-center">
+        <view class="flex-sub {{status == 1 ? 'active': ''}}" bindtap="changestatus" data-status="1">已上架</view>
+        <view class="flex-sub {{status == 0 ? 'active': ''}}"  bindtap="changestatus" data-status="0">已下架</view>
+    </view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

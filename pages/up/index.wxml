@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="padding-lr-sm">
+<checkbox-group bindchange="checkboxChange">
+  <label class="checkbox flex item padding-tb padding-lr-sm margin-tb-sm" wx:for="{{lists}}">
+    <checkbox value="{{item.id}}" checked="{{item.checked}}" />
+ 	<image src='{{item.seller_logo}}' class="logo margin-left-xs margin-right-sm"></image>
+	<view class="flex-sub text-left info">
+	    <view class="text-lg cf">{{item.manager_truename}}<span class="fr text-grey">{{item.distance}}km</span></view>
+	    <view class="padding-tb-sm text-grey">
+	    	<image src='/assets/images/add.png' class="add-icon"></image>
+		    {{item.seller_address}}
+		</view>
+	    <view class="text-sm text-yellow">{{item.promoters.name}}{{item.promoters.phone}}</view>
+	</view>
+  </label>
+</checkbox-group>
+	<view class="btn-group text-left flex" wx:if="{{type == 1}}">
+		<view class="flex-sub padding-left-sm">已选择{{num}}家</view>
+		<view class="flex-sub btn text-center btn-yellow" bindtap="staff">去移交</view>
+	</view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

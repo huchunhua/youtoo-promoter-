@@ -1,0 +1,49 @@
+<view class="bg-red text-center" wx:if="{{datas.status == 2}}">
+	{{datas.msg}}
+</view>
+<view class="padding-top-xs bg-white border-top padding-lr-sm">
+	<view class="flex padding-tb-sm cd">
+		<view class="title text-left">
+			商家名称
+		</view>
+		<view class="flex-sub cf text-left">
+			{{datas.seller_name}}
+			<span class="text-red fr" wx:if="{{datas.status == 0}}">{{datas.status_name}}</span>			
+			<span class="text-red fr" wx:if="{{datas.status == 2}}">未通过</span>			
+			<span class="text-green fr" wx:if="{{datas.status == 1}}">已通过</span>			
+			<span class="text-green fr" wx:if="{{datas.status == 3}}">已上线</span>			
+		</view>
+	</view>	
+	<view class="flex padding-tb-sm">
+		<view class="title text-left">联系人</view>{{datas.master_name}}
+	</view>	
+	<view class="flex padding-tb-sm">
+		<view class="title text-left">联系电话</view>{{datas.mobile}}
+	</view>	
+	<view class="flex padding-tb-sm">
+		<view class="title text-left">商铺地址</view>{{datas.address}}
+	</view>
+</view>
+<view class=" text-left margin-top-xs flex padding-tb padding-lr-sm bg-white">
+	<view class="title">经营范围</view>
+	<view class="flex-sub serve">
+		{{datas.seller_service}}
+	</view>
+</view>
+
+<view class="imgs padding-tb padding-lr-sm bg-white margin-top-xs">
+	<view class="cf">
+		<viw class="item fl {{imgtype == 0 ? 'active' :''}}" bindtap="chooseimg" data-type="0">营业执照<view class="line"></view></viw>
+		<viw class="item fl {{imgtype == 1 ? 'active' :''}}" bindtap="chooseimg" data-type="1">门店照<view class="line"></view></viw>
+		<viw class="item fl {{imgtype == 2 ? 'active' :''}}" bindtap="chooseimg" data-type="2">法人身份证<view class="line"></view></viw>
+	</view>
+	<image src="{{datas.manager_business}}" class="margin-top-xl" wx:if="{{imgtype == 0}}"></image>
+	<image src="{{datas.manager_shop_pic}}" class="margin-top-xl" wx:if="{{imgtype == 1}}"></image>
+	<image src="{{datas.manager_legal_card}}" class="margin-top-xl" wx:if="{{imgtype == 2}}"></image>
+	<image src="{{datas.manager_legal_card_back}}" class="margin-top-xl" wx:if="{{imgtype == 2}}"></image>
+</view>
+
+<view class="btn-wrap bg-white" wx:if="{{datas.status == 0}}">
+	<view class="btn btn-yellow margin-tb-xs margin-lr" bindtap="review">去审核</view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

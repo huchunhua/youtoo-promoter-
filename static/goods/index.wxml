@@ -1,0 +1,13 @@
+<view class="goodsinfo">
+    <image src="{{goods.g_icon}}"></image>
+    <view class="name">{{goods.g_name}}</view>
+    <view class="cf">
+    	<span class="text-red">￥{{goods.g_group_price}}</span>
+    	<view class="fr text-grey">门市价：<span class="old">￥{{goods.g_market_price}}</span></view>
+    </view>
+    <view class="cf mt-20">
+    	<view class="fl btn" wx:if="{{goods.g_status == 1}}">上架</view>
+    	<view class="fl btn" wx:if="{{goods.g_status == 0}}">下架</view>
+    	<view class="fr btn btn-yellow" bindtap="edit" data-id="{{goods.id}}">编辑</view>
+    </view>
+</view>

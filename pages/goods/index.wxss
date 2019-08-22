@@ -1,0 +1,42 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+page{
+    background-color: #fff;
+}
+.type{
+    border-top: 1px solid #f4f4f4;
+    height: 80rpx;
+    line-height: 70rpx;
+}
+.type>view{
+    font-size: 28rpx;
+}
+.type>view.active{
+    color:#000000;
+}
+.type .line{
+    margin:0 auto;
+    width: 40rpx;
+    height: 10rpx;
+}
+.type .active .line{
+    background-color: #fece00;
+}
+.goodslist{
+    padding-bottom: 120rpx;
+}
+.state{
+    position: fixed;
+    bottom:0;
+    left:0;
+    height: 100rpx;
+    width: 100%;
+    line-height: 100rpx;
+    border-top: 1px solid #f4f4f4;
+    font-size: 30rpx;
+    background-color: #fff;
+    z-index: 10
+}
+.state .active{
+    color:#fdcd11;
+}

@@ -1,0 +1,17 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+page{
+  background-color: #fff
+}
+image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 120rpx;
+}
+.list{
+  margin:30rpx 20rpx;
+  width: calc(50% - 40rpx);
+  height: 310rpx;
+  border-radius: 10rpx;
+  box-shadow:4rpx 2rpx rgba(0,0,0,.1),-2rpx 0 rgba(0,0,0,.1);
+}

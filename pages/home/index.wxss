@@ -1,0 +1,20 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+map{
+	margin:30rpx auto;
+	padding:0 20rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	border-radius: 50rpx;
+}
+.page-body-button{
+	height: 60rpx;
+	line-height:60rpx;
+}
+.map-modal dialog {
+	width: 300px;
+	max-width: 300px;
+}
+.btn-area .border-top{
+	border-top: 1px solid #f2f1ed;
+}

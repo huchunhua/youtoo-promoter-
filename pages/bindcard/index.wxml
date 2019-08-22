@@ -1,0 +1,40 @@
+<view id="layout">
+    <view class="margin-top-sm margin-lr-sm padding-tb-sm padding-lr bg-white card-info radius">
+         <view class="padding-bottom-sm border-bottom cf">
+             <text class="text-font-left">开户银行</text>
+             <view class="fr">
+                <picker bindchange="bindPickerChange" value="{{bank}}" range="{{bank}}" range-key="bank_name">
+                    <view class="picker" style='color:{{index==""?"#E2E2E2":black}}'>
+                        {{index==""?"请选择开户银行":bank[index].bank_name}}
+                        <image src="../../image/my_more.png" class="more-icon" wx:if="{{index == ''}}"></image>
+                    </view>
+                </picker>
+             </view>
+         </view>         
+         <view class="padding-bottom-sm border-bottom flex">
+            <text class="text-font-left">开户银行网点名称</text>
+            <input value="{{bankname}}" placeholder='请输入银行网店名称' class="flex-sub" placeholder-class="text-font-right" bindinput="bankname"></input>
+         </view>         
+         <view class="padding-bottom-sm border-bottom flex">
+            <text class="text-font-left">卡号</text>
+            <input value="{{card}}" placeholder='请输入卡号' maxlength="19" class="flex-sub" placeholder-class="text-font-right" bindinput="card"></input>
+         </view>         
+         <view class="padding-bottom-sm flex">
+            <text class="text-font-left">姓名</text>
+            <input value="{{username}}" placeholder='请输入姓名' class="flex-sub" placeholder-class="text-font-right" bindinput="username"></input>
+         </view>
+    </view>
+    <view class="margin-top-sm margin-lr-sm padding-tb-sm padding-lr bg-white card-info radius">
+        <view class="padding-bottom-sm border-bottom cf">
+            <text class="text-font-left">手机号</text>
+            <span class="fr">{{phone}}</span>
+        </view>  
+        <view class="padding-bottom-sm flex vericode">
+            <text class="text-font-left">验证码</text>
+            <input value="{{code}}" placeholder='请输验证码' class="flex-sub" placeholder-class="text-font-right" bindinput="code"></input>
+            <view class="btn btn-byellow" bindtap="sendmsg">发送</view>
+        </view>
+    </view>
+    <view class="btn-sub btn-yellow margin-lr-sm margin-top-lg text-lg" bindtap="addcard">提交</view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

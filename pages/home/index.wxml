@@ -1,0 +1,16 @@
+    <view class="page-section page-section-gap">
+      <map
+        id="myMap"
+        style="width: 300px; height: 300px;"
+        latitude="{{latitude}}"
+        longitude="{{longitude}}"
+        controls="{{controls}}"
+        show-location
+      ></map>
+    </view>
+    <view class="btn-area">
+      <view class='padding-sm '>经度：{{maplongitude}}</view>
+      <view class="padding-sm border-top">纬度：{{maplatitude}}</view>
+      <view bindtap="getCenterLocation" class="page-body-button btn-yellow padding-lr-sm" type="primary">确认获取图标所在位置为店铺位置(请拖动地图)</view>
+      <view bindtap="write" class="page-body-button btn-green padding-lr-sm" type="primary">将当前经纬度信息填入商铺信息</view>
+    </view>

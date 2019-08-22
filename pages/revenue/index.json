@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "管理收益",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#fff",
+  "enablePullDownRefresh": true
+}

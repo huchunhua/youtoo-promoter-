@@ -1,0 +1,62 @@
+@import "/icon.wxss";
+@import "/base-rpx.wxss";
+Page{
+    background: #f4f4f4;
+    font-size: 32rpx;
+    color:#0e0e0e;
+}
+.bg-white{
+    background-color: #fff;
+}
+.shop_loge{
+	margin-right: 20rpx;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 10rpx;
+}
+.shop-name{
+	padding-top:15rpx;
+}
+.border-top{
+	border-top: 1px solid #f4f4f4;
+}
+.content>.item{
+	height: 100rpx;
+	line-height: 100rpx;
+	border-bottom: 1px solid #f4f4f4;
+}
+.content .card{
+	height: 150rpx;
+	line-height: 70rpx;
+}
+.content .card>view{
+	line-height: 33rpx;
+}
+image.more-icon{
+	width: 10rpx;
+	height: 20rpx;
+}
+.item image.more-icon{
+	margin-top: 40rpx;
+}
+.finance{
+	height: 160rpx;
+	line-height: 80rpx;
+}
+.finance .info{
+	line-height: 40rpx;
+}
+image.manege-icon{
+	width: 70rpx;
+	height: 70rpx;
+	border-radius:70rpx;
+	margin-right: 30rpx;
+}
+.invite{
+	width: calc(100% - 40rpx);
+	height: 80rpx;
+	line-height: 80rpx;
+	border-radius: 80rpx;
+	text-align: center;
+	margin:40rpx 20rpx;
+}

@@ -1,0 +1,24 @@
+<view id="layout">
+     <view class="total padding-tb bg-white">
+         <view class="padding-top-sm text-lg">今日收益</view>
+         <view class="padding-tb-sm text-red text-xxl">{{datas.todayAll}}</view>
+         <view class="padding-top-lg flex">
+             <view class="flex-sub border-right">
+                 <view class="text-sm padding-bottom-sm">本周收益</view>
+                 <view class="text-lg">2323.00</view>
+             </view>
+             <view class="flex-sub">
+                 <view class="text-sm padding-bottom-sm">本月收益</view>
+                 <view class="text-lg">2323.00</view>
+             </view>
+         </view>
+     </view>
+     <view class="margin-top-xs padding-sm bg-white">
+         <view class="text-lg">总收益</view>
+         <view class="text-red padding-tb text-xxl">2323.00</view>
+         <view class="btn-byellow btn-cash text-lg" bindtap="profit">
+             查看明细
+         </view>
+     </view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

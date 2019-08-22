@@ -1,0 +1,37 @@
+<view id="">
+  <view class="pagetitle">
+    <view class="flex title-info border-top bg-white padding-tb text-center">
+      <view class="flex-sub">
+        销售收益总额
+        <view class="text-red padding-top-sm">{{datas.allEarningsMoney}}</view>
+      </view>      
+      <view class="flex-sub">
+        销售总额
+        <view class="text-red padding-top-sm">{{datas.allOrderMoney}}</view>
+      </view>
+    </view>
+    <view class="picker_group padding-tb padding-lr-sm cf">  
+        <picker mode="date" value="{{startdate}}"  end="{{enddate}}" bindchange="bindDateChange">  
+          <view class="picker">
+            {{startdate}}  
+          </view>  
+        </picker>  
+        至  
+        <picker mode="date" value="{{enddate}}" start="{{startdate}}" end="2050-01-01" bindchange="bindDateChange2">  
+          <view class="picker">  
+            {{enddate}}  
+          </view>  
+        </picker>
+        <view class="fr" bindtap="screen">  
+          <image src="../../image/date.png" class="screen"></image>筛选 
+        </view>   
+    </view>
+  </view>  
+   <scroll-view
+    scroll-y
+    style="height: 1000rpx;"
+    bindscrolltolower="lower"  >
+    <presentation wx:for="{{datas.lists}}" Info="{{item}}" wx:if="{{item}}"></presentation>
+  </scroll-view>
+</view>
+<loading fix size="large" wx:if="{{!pageLoaded}}">加载中</loading>

@@ -1,0 +1,25 @@
+.logo{
+    text-align: center;
+    font-size: 26rpx;
+    color: #333333;
+    font-weight: bold;
+}
+.logo-image{
+    margin-top: 150rpx;
+    width: 170rpx;
+    height: 170rpx;
+}
+.logo-text{
+    margin-top: 40rpx;
+    margin-bottom: 90rpx;
+    display: block;
+}
+
+button{
+    width:540rpx;
+    height:80rpx;
+    margin-bottom:40rpx;
+    line-height:80rpx;
+    font-size:32rpx;
+    border-radius:8rpx;
+}
